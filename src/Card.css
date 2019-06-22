@@ -1,0 +1,42 @@
+button{
+    font-size: 2em;
+    background-color: black;
+    color: yellow;
+    border: none;
+    margin-top: 20px;
+    border-radius: 25px
+}
+
+button:focus{
+    outline: none
+}
+
+.card{
+    background-color: white;
+    height: auto;
+    position: relative;
+    left: 25%;
+    width: 50%;
+    border-radius: 10%
+}
+
+input, label{
+    margin: 1em 1em;
+    padding: 2em 0;
+    box-shadow: none;
+    border: none;
+}
+input:focus {
+    outline: none
+}
+
+.form{
+    
+    display: inline-block;
+    zoom: 1;
+    list-style: none;
+    text-align: left
+}
+
+
+

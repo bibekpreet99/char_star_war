@@ -1,0 +1,13 @@
+img{
+    margin: 0;
+    width: auto;
+
+}
+
+p{
+    color: black;
+    font-size: 2em;
+    display: inline-block;
+    background-color: yellow;
+    font-family: Arial, Helvetica, sans-serif
+}

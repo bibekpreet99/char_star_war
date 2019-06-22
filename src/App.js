@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Head from "./Head"
+import "./App.css";
+import Card from "./Card"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+    constructor(){
+        super()
+        this.state = {
+            idObj: {}
+        }
+    }
+
+        onButtonPress = (event)=>{
+            fetch(`https://swapi.co/api/people/${Math.floor((Math.random() * 88) + 1)}/`)
+            .then(response=>response.json())
+            .then(obj=>{
+                this.setState({
+                    idObj: Object.assign({}, this.state, obj)
+                })
+            }
+            )
+            .catch(err=>console.log(err))
+        }
+
+
+    render(){
+        const { idObj } = this.state
+        return(
+            <div className="tc">
+                <Head/>
+                <Card props={{press: this.onButtonPress, data: idObj}}/>
+            </div>
+        )
+    }
 }
 
-export default App;
+export default App
