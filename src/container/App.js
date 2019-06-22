@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Head from "./Head"
+import Head from "../components/Head"
 import "./App.css";
-import Card from "./Card"
+import Card from "../components/Card"
 
 class App extends Component{
     constructor(){
