@@ -7,7 +7,7 @@ img{
 p{
     color: black;
     font-size: 2em;
-    display: inline-block;
+    /* display: inline-block; */
     background-color: yellow;
     font-family: Arial, Helvetica, sans-serif
 }
